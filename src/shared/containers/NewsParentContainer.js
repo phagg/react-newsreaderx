@@ -58,7 +58,7 @@ class NewsParentContainer extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <div className="row">
         <div className="col-md-3" style={styles.leftColumnStyle}>
           <NewsList
             list={this.state.list}
@@ -72,7 +72,7 @@ class NewsParentContainer extends Component {
         <div className="col-md-3">
           <CreateNewsForm handleNewArticle={this.handleNewArticle} />
         </div>
-      </React.Fragment>
+      </div>
     );
   }
 }

@@ -1,15 +1,17 @@
 import React, { Component } from "react";
 
-import NewsParentContainer from "./shared/containers/NewsParentContainer";
+import Routes from "./routes";
+import TopNavigation from "./shared/components/TopNavigation";
 
 class App extends Component {
   render() {
     return (
-      <div className="container-fluid pt-2">
-        <div className="row">
-          <NewsParentContainer />
+      <React.Fragment>
+        <TopNavigation />
+        <div className="container-fluid pt-2">
+          <Routes />
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 }
