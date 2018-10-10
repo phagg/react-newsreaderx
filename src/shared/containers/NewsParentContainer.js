@@ -4,6 +4,7 @@ import axios from "axios";
 
 import NewsList from "../../sections/articles/components/NewsList";
 import NewsDetail from "../../sections/newsviewer/components/NewsDetail";
+import CreateNewsForm from "../../sections/createnews/components/CreateNewsForm";
 
 const initialState = {
   list: [],
@@ -59,6 +60,9 @@ class NewsParentContainer extends Component {
         </div>
         <div className="col-md-6">
           <NewsDetail selectedItem={this.state.selectedItem} />
+        </div>
+        <div className="col-md-3">
+          <CreateNewsForm />
         </div>
       </React.Fragment>
     );
