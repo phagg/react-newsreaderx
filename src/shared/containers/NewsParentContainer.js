@@ -20,6 +20,7 @@ class NewsParentContainer extends Component {
 
     this.handleLoadMore = this.handleLoadMore.bind(this);
     this.handleClickedItem = this.handleClickedItem.bind(this);
+    this.handleNewArticle = this.handleNewArticle.bind(this);
   }
 
   componentDidMount() {
@@ -37,6 +38,13 @@ class NewsParentContainer extends Component {
         list: [...this.state.list, ...data.results],
         next: data.next
       });
+    });
+  }
+
+  handleNewArticle(payload) {
+    console.log("Received payload:", payload);
+    this.setState({
+      list: [...[payload], ...this.state.list]
     });
   }
 
@@ -62,7 +70,7 @@ class NewsParentContainer extends Component {
           <NewsDetail selectedItem={this.state.selectedItem} />
         </div>
         <div className="col-md-3">
-          <CreateNewsForm />
+          <CreateNewsForm handleNewArticle={this.handleNewArticle} />
         </div>
       </React.Fragment>
     );
