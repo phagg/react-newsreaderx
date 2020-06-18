@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import TimeAgo from "react-timeago";
 
+
 class NewsListItem extends Component {
   render() {
     const { item } = this.props;
@@ -12,14 +13,10 @@ class NewsListItem extends Component {
         onClick={event => this.props.handleClickedItem(item)}
       >
         <p className="m-0">
-          <small>
             <strong>{item.heading}</strong>
-          </small>
         </p>
         <p className="m-0 text-muted">
-          <small>
-            {item.provider.name} &middot; <TimeAgo date={item.published_at} />
-          </small>
+            {item.provider} &middot; <TimeAgo date={item.published_at} />
         </p>
       </li>
     );
@@ -27,3 +24,4 @@ class NewsListItem extends Component {
 }
 
 export default NewsListItem;
+

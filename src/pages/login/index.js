@@ -5,7 +5,7 @@ import axios from "axios";
 const initialState = {
   form: {
     email: "",
-    password: ""
+    password: "1234"
   }
 };
 

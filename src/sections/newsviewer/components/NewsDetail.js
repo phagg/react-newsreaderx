@@ -6,7 +6,7 @@ export default class NewsDetail extends Component {
     if (selectedItem.image) {
       return (
         <div className="card-body m-0 p-0">
-          <img src={selectedItem.image} className="img-fluid" />
+          <img src={selectedItem.image} className="img-fluid" alt="news" />
         </div>
       );
     }
@@ -20,7 +20,7 @@ export default class NewsDetail extends Component {
         <a
           className="btn btn-info btn-sm"
           href={selectedItem.source_url}
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
         >
           READ MORE
         </a>
@@ -51,4 +51,3 @@ export default class NewsDetail extends Component {
   }
 }
 
-const styles = {};

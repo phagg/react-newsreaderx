@@ -59,7 +59,7 @@ class NewsParentContainer extends Component {
   render() {
     return (
       <div className="row">
-        <div className="col-md-3" style={styles.leftColumnStyle}>
+        <div className="col-md-3 leftColumnStyle">
           <NewsList
             list={this.state.list}
             handleLoadMore={this.handleLoadMore}
@@ -77,8 +77,5 @@ class NewsParentContainer extends Component {
   }
 }
 
-const styles = {
-  leftColumnStyle: { maxHeight: "99vh", overflowY: "scroll" }
-};
 
 export default NewsParentContainer;
